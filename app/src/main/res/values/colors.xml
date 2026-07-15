@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- HFTX AI brand palette (matches hftxai.com) -->
+    <color name="hftx_bg">#0B0E14</color>
+    <color name="hftx_surface">#131A22</color>
+    <color name="hftx_surface_elevated">#1B2633</color>
+    <color name="hftx_border">#1E2B3C</color>
+    <color name="hftx_teal">#00C9A7</color>
+    <color name="hftx_teal_dim">#0D2B25</color>
+    <color name="hftx_gold">#F0A500</color>
+    <color name="hftx_gold_dim">#2B1E00</color>
+    <color name="hftx_red">#E05252</color>
+    <color name="hftx_red_dim">#2B1010</color>
+    <color name="hftx_blue">#3D9EFF</color>
+    <color name="hftx_purple">#8B5CF6</color>
+    <color name="hftx_text_primary">#FFFFFF</color>
+    <color name="hftx_text_secondary">#8B9CAF</color>
+    <color name="hftx_text_dim">#4A5C6E</color>
+
+    <!-- Legacy aliases so existing code compiles unchanged -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_nv_select">#00C9A7</color>
+    <color name="main_nv_not_select">#4A5C6E</color>
+    <color name="main_nv_bg">#0B0E14</color>
+    <color name="main_nv_text_bg">#131A22</color>
+    <color name="main_line_1">#1E2B3C</color>
+    <color name="title_bar_left">#FFFFFF</color>
+    <color name="title_bar_center">#FFFFFF</color>
+    <color name="title_bar_right">#00C9A7</color>
+    <color name="title_bar_line">#1E2B3C</color>
+    <color name="bg_primary">#0B0E14</color>
+    <color name="bg_bright">#00C9A7</color>
+    <color name="bg_title_bar">#0B0E14</color>
+    <color name="bg_log">#131A22</color>
+    <color name="bg_function_title">#131A22</color>
+    <color name="dialog_common_1">#FFFFFF</color>
+    <color name="bg_dialog">#131A22</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_bright">#00C9A7</color>
+    <color name="text_title">#8B9CAF</color>
+    <color name="transparent">#00000000</color>
+</resources>
