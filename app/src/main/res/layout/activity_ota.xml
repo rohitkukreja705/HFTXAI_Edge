@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:orientation="vertical"
+    tools:context=".activity.OtaActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qc_text_0037"
+        android:textColor="@color/text_bright" />
+
+    <TextView
+        android:id="@+id/tv_firmware_version"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qc_text_0104"
+        android:textColor="@color/text_bright" />
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/select_file"
+        android:layout_marginTop="@dimen/qc_dp_10"
+        android:layout_width="match_parent"
+        app:fiv_showArrow="true"
+        android:layout_height="wrap_content"
+        app:fiv_titleText="@string/text_33" />
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/start_ota"
+        android:layout_width="match_parent"
+        app:fiv_showArrow="true"
+        android:layout_height="wrap_content"
+        app:fiv_titleText="@string/text_34" />
+
+
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/stop_ota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fiv_titleText="@string/qc_text_0036" />
+
+    <CheckBox
+        android:id="@+id/force_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/qc_dp_10"
+        android:text="@string/qc_text_0109"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:id="@+id/select_file_path"
+        android:layout_width="wrap_content"
+        app:fiv_showArrow="true"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/qc_dp_10"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/qc_dp_10"
+        android:textColor="@color/text_primary" />
+
+</LinearLayout>
