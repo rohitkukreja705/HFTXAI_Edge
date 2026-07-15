@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="bottom"
+        android:background="@color/bg_log"
+        android:orientation="vertical"
+        android:padding="@dimen/qc_dp_10"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/qc_text_0094"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_ble_log_clear"
+                android:layout_width="@dimen/qc_dp_30"
+                android:layout_height="@dimen/qc_dp_30"
+                android:contentDescription="@string/qc_text_0095"
+                android:padding="@dimen/qc_dp_4"
+                android:src="@mipmap/ic_log_clear" />
+
+            <ImageView
+                android:id="@+id/iv_ble_log_collect_toggle"
+                android:layout_width="@dimen/qc_dp_30"
+                android:layout_height="@dimen/qc_dp_30"
+                android:layout_marginStart="@dimen/qc_dp_10"
+                android:contentDescription="@string/qc_text_0098"
+                android:padding="@dimen/qc_dp_4"
+                android:src="@mipmap/ic_log_stop" />
+
+            <ImageView
+                android:id="@+id/iv_ble_log_close"
+                android:layout_width="@dimen/qc_dp_30"
+                android:layout_height="@dimen/qc_dp_30"
+                android:layout_marginStart="@dimen/qc_dp_10"
+                android:contentDescription="@string/qc_text_0099"
+                android:padding="@dimen/qc_dp_4"
+                android:src="@mipmap/ic_log_close" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_ble_log_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/qc_dp_8"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_ble_log_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/qc_dp_250"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/qc_sp_12" />
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</FrameLayout>
