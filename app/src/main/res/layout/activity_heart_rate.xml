@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    tools:context=".activity.HeartRateActivity">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/qc_dp_120"
+        app:layout_constraintBottom_toTopOf="@+id/include_ble_log_panel"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/qc_dp_10">
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_heart_rate_setting_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/qc_text_0042" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_heart_rate_setting_write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/qc_text_0043" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_data_sync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/qc_text_0044" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_today_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/health_query_today" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_single_day_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/health_query_single_day" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_range_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="@string/health_query_day_range" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_start_measure_once"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0045" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_stop_measure_once"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showDivider="false"
+                app:fiv_titleText="@string/qc_text_0052" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <include layout="@layout/log_float_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
