@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_1">扫描</string>
+    <string name="text_2">重新连接</string>
+    <string name="text_3">断开连接</string>
+    <string name="text_4">设置时间</string>
+    <string name="text_5">查找手表</string>
+    <string name="text_6">电量</string>
+    <string name="text_7">小时制、公制</string>
+    <string name="text_8">消息推送测试</string>
+    <string name="text_9">读取闹钟</string>
+    <string name="text_10">写入闹钟</string>
+    <string name="text_11">血氧</string>
+    <string name="text_12">拍照</string>
+    <string name="text_13">音乐</string>
+    <string name="text_14">电话</string>
+    <string name="text_15">设置目标</string>
+    <string name="text_16">表盘</string>
+    <string name="text_17">睡眠</string>
+    <string name="text_18">计算睡眠</string>
+    <string name="text_19">手动心率</string>
+    <string name="text_20">手动血压</string>
+    <string name="text_21">手动血氧</string>
+    <string name="text_22">连接中</string>
+    <string name="text_23">获取消息推送开关</string>
+    <string name="text_24">设置消息推送开关</string>
+    <string name="text_25">同步自动体温</string>
+    <string name="text_26">同步手动体温</string>
+    <string name="text_27">设置个人信息</string>
+    <string name="text_28">同步个人信息</string>
+    <string name="text_29">添加监听</string>
+    <string name="text_30">移除监听</string>
+    <string name="text_31">移除全部监听</string>
+    <string name="text_32">OTA</string>
+    <string name="text_33">选择文件</string>
+    <string name="text_34">开始升级</string>
+    <string name="text_35">饮水</string>
+    <string name="text_36">运动</string>
+    <string name="text_37">手动压力</string>
+    <string name="text_38">心率 PPG</string>
+    <string name="text_39">HRV</string>
+    <string name="text_40">一键测量</string>
+    <string name="text_41">启用触摸</string>
+    <string name="text_42">间隔血氧</string>
+    <string name="text_43">间隔血氧状态</string>
+    <string name="text_44">读取用户 ID</string>
+    <string name="text_45">读取体温</string>
+    <string name="text_46">体温测量控制</string>
+    <string name="text_47">关闭蓝牙</string>
+    <string name="text_48">写入用户 ID</string>
+    <string name="text_49">新版睡眠</string>
+
+    <string name="qc_text_0001">设备连接</string>
+
+    <string name="qc_text_0002">扫描</string>
+    <string name="qc_text_0003">重新连接</string>
+    <string name="qc_text_0004">断开连接</string>
+    <string name="qc_text_0005">蓝牙配对</string>
+    <string name="qc_text_0006">设备通知监听</string>
+    <string name="qc_text_0007">注册</string>
+    <string name="qc_text_0008">取消注册</string>
+    <string name="qc_text_0009">设备名称：</string>
+    <string name="qc_text_0010">设备 Mac 地址：</string>
+    <string name="qc_text_0011">蓝牙状态：</string>
+    <string name="qc_text_0012">已连接</string>
+    <string name="qc_text_0013">已断开</string>
+
+
+    <string name="qc_text_0014">设备设置与同步数据</string>
+    <string name="qc_text_0015">设备设置</string>
+    <string name="qc_text_0016">同步数据</string>
+
+
+    <string name="qc_text_0017">固件更新</string>
+    <string name="qc_text_0018">通过 BLE 更新</string>
+    <string name="qc_text_0019">版本：</string>
+
+    <string name="qc_text_0020">更多设备信息</string>
+
+    <string name="qc_text_0021">心率过高</string>
+    <string name="qc_text_0022">心率过低</string>
+
+    <string name="qc_text_0023">我知道了</string>
+    <string name="qc_text_0024">提醒</string>
+
+    <string name="qc_text_0025">距离经期还有 %s 天！</string>
+    <string name="qc_text_0026">距离排卵期还有 %s 天！</string>
+    <string name="qc_text_0027">闹钟提醒</string>
+    <string name="qc_text_0028">久坐提醒</string>
+    <string name="qc_text_0029">饮水提醒</string>
+    <string name="qc_text_0030">检测到您的心率过高（当前：%s 次/分钟）。请立即停止活动并坐下休息。</string>
+    <string name="qc_text_0031">步数 %s，卡路里 %s，距离 %s</string>
+
+    <string name="qc_text_0032">进度：%s%%</string>
+    <string name="qc_text_0033">文件路径：%s</string>
+    <string name="qc_text_0034">文件路径无效：%s</string>
+    <string name="qc_text_0035">尚未选择 bin 文件</string>
+    <string name="qc_text_0036">停止升级</string>
+    <string name="qc_text_0037">请先选择一个 bin 文件</string>
+    <string name="qc_text_0038">请选择一个 bin 文件</string>
+    <string name="qc_text_0040">同步数据</string>
+    <string name="qc_text_0041">心率</string>
+    <string name="qc_text_0042">读取设置</string>
+    <string name="qc_text_0043">写入设置</string>
+    <string name="qc_text_0044">数据同步</string>
+    <string name="qc_text_0045">开始单次测量</string>
+    <string name="qc_text_0046">已读取心率设置</string>
+    <string name="qc_text_0047">已更新心率设置</string>
+    <string name="qc_text_0048">已开始同步心率（实时）</string>
+    <string name="qc_text_0049">已开始同步心率</string>
+    <string name="qc_text_0050">不支持手动心率</string>
+    <string name="qc_text_0051">手动心率值：%s</string>
+    <string name="qc_text_0052">停止单次测量</string>
+    <string name="qc_text_0053"> 成功</string>
+    <string name="qc_text_0054"> 失败</string>
+    <string name="qc_text_0055">设备已断开连接</string>
+
+    <string name="qc_text_0056">扫描设备</string>
+    <string name="qc_text_0057">筛选输入的设备名称</string>
+
+
+    <string name="qc_text_0058">活动步数</string>
+    <string name="qc_text_0059">睡眠</string>
+    <string name="qc_text_0060">HRV</string>
+    <string name="qc_text_0061">血压</string>
+    <string name="qc_text_0062">血氧</string>
+    <string name="qc_text_0063">压力</string>
+    <string name="qc_text_0064">运动记录</string>
+    <string name="qc_text_0065">体温</string>
+    <string name="qc_text_0066">饮水提醒</string>
+    <string name="qc_text_0067">久坐提醒</string>
+
+    <string name="qc_text_0068">同步今日步数</string>
+    <string name="qc_text_0069">同步步数详情</string>
+    <string name="qc_text_0070">同步睡眠数据</string>
+    <string name="qc_text_0071">同步 HRV 数据</string>
+    <string name="qc_text_0072">开始 HRV 测量</string>
+    <string name="qc_text_0073">停止 HRV 测量</string>
+    <string name="qc_text_0074">HRV 值：%s</string>
+    <string name="qc_text_0075">同步血压数据</string>
+    <string name="qc_text_0076">开始血压测量</string>
+    <string name="qc_text_0077">停止血压测量</string>
+    <string name="qc_text_0078">血压值：%s/%s</string>
+    <string name="qc_text_0079">同步血氧数据</string>
+    <string name="qc_text_0080">开始血氧测量</string>
+    <string name="qc_text_0081">停止血氧测量</string>
+    <string name="qc_text_0082">血氧值：%s</string>
+    <string name="qc_text_0083">同步压力数据</string>
+    <string name="qc_text_0084">开始压力测量</string>
+    <string name="qc_text_0085">停止压力测量</string>
+    <string name="qc_text_0086">压力值：%s</string>
+    <string name="qc_text_0087">同步运动记录</string>
+    <string name="qc_text_0088">同步自动体温</string>
+    <string name="qc_text_0089">同步手动体温</string>
+    <string name="qc_text_0090">同步饮水提醒</string>
+    <string name="qc_text_0091">同步久坐提醒</string>
+    <string name="qc_text_0092">功能暂不支持</string>
+    <string name="qc_text_0093">同步已开始</string>
+
+    <string name="qc_text_0094">蓝牙日志</string>
+    <string name="qc_text_0095">清空日志</string>
+    <string name="qc_text_0096">开始采集</string>
+    <string name="qc_text_0097">暂停采集</string>
+    <string name="qc_text_0098">切换采集状态</string>
+    <string name="qc_text_0099">关闭日志面板</string>
+    <string name="qc_text_0100">切换日志面板</string>
+    <string name="qc_text_0101">连接设备</string>
+    <string name="qc_text_0102">电量：%1$s 充电中</string>
+    <string name="qc_text_0103">读取设备信息</string>
+    <string name="qc_text_0104">固件版本：%s</string>
+    <string name="qc_text_0105">电量：%1$s</string>
+    <string name="qc_text_0106">OTA 升级成功</string>
+    <string name="qc_text_0107">OTA 升级失败（错误码：%1$d）</string>
+    <string name="qc_text_0108">查找设备</string>
+    <string name="qc_text_0109">强制升级</string>
+    <string name="qc_text_0110">解除绑定</string>
+    <string name="common_cancel">取消</string>
+    <string name="device_bind_connect_failed">连接失败</string>
+    <string name="device_bind_connect_timeout">连接超时，请重试</string>
+    <string name="device_bind_connect_cancelled">已取消连接</string>
+    <string name="health_batch_sync">批量同步数据</string>
+    <string name="health_batch_sync_start_failed">批量同步启动失败</string>
+    <string name="health_batch_sync_finish_summary">批量同步完成。成功=%1$d 失败=%2$d 不支持=%3$d 状态=%4$s</string>
+    <string name="title_health_settings">健康设置</string>
+    <string name="title_target_and_profile">目标与个人资料</string>
+    <string name="title_display_and_device">显示与设备</string>
+    <string name="title_notification">通知</string>
+    <string name="title_advanced">高级</string>
+    <string name="title_sugarlipids">糖脂</string>
+    <string name="advanced_open_muslim">打开Muslim</string>
+    <string name="advanced_close_muslim">关闭Muslim</string>
+    <string name="health_query_today">今日数据</string>
+    <string name="health_query_single_day">指定日期数据</string>
+    <string name="health_query_day_range">日期范围数据</string>
+    <string name="health_query_day_index_hint">日期索引（0=今天）</string>
+    <string name="health_query_start_day_hint">开始日期索引（0=今天）</string>
+    <string name="health_query_count_hint">数量</string>
+    <string name="health_query_invalid_number">请输入有效的非负数</string>
+    <string name="revision_title">佩戴校准</string>
+    <string name="revision_description">如果无法测量心率或者对空检测可以出值时，可按以下方法进行佩戴校准；心率功能正常则不需要校准。</string>
+    <string name="revision_method_title">校准方法如下：</string>
+    <string name="revision_step_one">1. 手持戒指，保持灯在上面（如下图），然后点击“开始校准”，灯亮 5 秒后进行下一步。</string>
+    <string name="revision_step_two">2. 将戒指戴在手指上，保持戒指与皮肤紧密贴合直到灯熄灭，即可完成校准（具体操作如下图）。</string>
+    <string name="revision_button_start">开始校准</string>
+    <string name="revision_button_recalibrate">重新校准</string>
+    <string name="revision_button_calibrating">校准中...</string>
+    <string name="revision_toast_charging">正在充电，无法进行佩戴校准</string>
+    <string name="revision_toast_failed">校准失败</string>
+    <string name="revision_toast_success">校准成功</string>
+    <string name="revision_toast_connect_device_first">请先连接设备</string>
+    <string name="praise_count">赞念计数： %1$d</string>
+</resources>
