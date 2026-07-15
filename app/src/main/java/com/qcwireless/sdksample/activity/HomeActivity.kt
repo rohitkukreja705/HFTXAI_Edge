@@ -220,8 +220,10 @@ class HomeActivity : BaseActivity() {
         binding.tvDeviceMac.text =
             getString(R.string.qc_text_0010) + deviceMac
         // Mirror to new UI cards
-        binding.tvDeviceNameDisplay.text = deviceName.ifEmpty { "No device paired" }
-        binding.tvDeviceMacDisplay.text = deviceMac.ifEmpty { "Tap scan to connect" }
+        try {
+            binding.tvDeviceNameDisplay.text = deviceName.ifEmpty { "No device paired" }
+            binding.tvDeviceMacDisplay.text = deviceMac.ifEmpty { "Tap scan to connect" }
+        } catch (e: Exception) { /* non-fatal */ }
         if (BleOperateManager.getInstance().isConnected) {
             showConnectedState()
             requestBatteryStatus()
@@ -619,10 +621,14 @@ class HomeActivity : BaseActivity() {
         refreshConnectionActionState(isConnected = true)
         refreshFirmwareVersionState(isConnected = true)
         // Update new UI
-        binding.tvBleStatusChip.text = "● Online"
-        binding.tvBleStatusChip.setTextColor(getColor(R.color.hftx_teal))
-        binding.tvBleStatusChip.background = getDrawable(R.drawable.bg_status_connected)
-        binding.btnDisconnectNew.visibility = android.view.View.VISIBLE
+        try {
+            binding.tvBleStatusChip.text = "● Online"
+            binding.tvBleStatusChip.setTextColor(
+                androidx.core.content.ContextCompat.getColor(this, R.color.hftx_teal))
+            binding.tvBleStatusChip.background =
+                androidx.core.content.ContextCompat.getDrawable(this, R.drawable.bg_status_connected)
+            binding.btnDisconnectNew.visibility = android.view.View.VISIBLE
+        } catch (e: Exception) { /* non-fatal UI update */ }
     }
 
     private fun showDisconnectedState() {
@@ -632,10 +638,14 @@ class HomeActivity : BaseActivity() {
         refreshConnectionActionState(isConnected = false)
         refreshFirmwareVersionState(isConnected = false)
         // Update new UI
-        binding.tvBleStatusChip.text = "● Offline"
-        binding.tvBleStatusChip.setTextColor(getColor(R.color.hftx_red))
-        binding.tvBleStatusChip.background = getDrawable(R.drawable.bg_status_disconnected)
-        binding.btnDisconnectNew.visibility = android.view.View.GONE
+        try {
+            binding.tvBleStatusChip.text = "● Offline"
+            binding.tvBleStatusChip.setTextColor(
+                androidx.core.content.ContextCompat.getColor(this, R.color.hftx_red))
+            binding.tvBleStatusChip.background =
+                androidx.core.content.ContextCompat.getDrawable(this, R.drawable.bg_status_disconnected)
+            binding.btnDisconnectNew.visibility = android.view.View.GONE
+        } catch (e: Exception) { /* non-fatal UI update */ }
     }
 
     private fun refreshConnectionActionState(
