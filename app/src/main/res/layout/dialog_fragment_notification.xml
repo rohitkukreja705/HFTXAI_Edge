@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/qc_dp_16"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/qc_dp_22"
+        android:background="@drawable/bg_rect_corner_dialog"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <androidx.constraintlayout.utils.widget.ImageFilterView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:src="@mipmap/ic_common_dialog_bg"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:round="@dimen/qc_dp_16" />-->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/qc_dp_12"
+            android:layout_marginEnd="@dimen/qc_dp_12"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/qc_dp_26"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/qc_text_0024"
+            android:textColor="@color/dialog_common_1"
+            android:textSize="@dimen/qc_sp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/qc_dp_24"
+            android:layout_height="@dimen/qc_dp_24"
+            android:layout_marginTop="@dimen/qc_dp_22"
+            android:layout_marginEnd="@dimen/qc_dp_12"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/qc_dp_4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/qc_dp_12"
+            android:layout_marginTop="@dimen/qc_dp_60"
+            android:layout_marginEnd="@dimen/qc_dp_12"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/qc_dp_2"
+            android:minHeight="@dimen/qc_dp_60"
+            android:textColor="@color/dialog_common_1"
+            android:textSize="@dimen/qc_sp_16"
+            android:text="@string/qc_text_0024"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/qc_dp_120"
+            android:layout_height="@dimen/qc_dp_50"
+            android:layout_marginStart="@dimen/qc_dp_32"
+            android:layout_marginTop="@dimen/qc_dp_12"
+            android:layout_marginEnd="@dimen/qc_dp_32"
+            app:layout_goneMarginBottom="@dimen/qc_dp_32"
+            android:background="@drawable/bg_bright_12_shape"
+            android:gravity="center"
+            android:textSize="@dimen/qc_sp_16"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_content"
+            android:text="@string/qc_text_0023" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
