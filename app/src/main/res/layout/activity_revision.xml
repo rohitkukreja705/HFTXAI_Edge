@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF6F4"
+    tools:context=".ui.device.touch.RevisionSampleActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/qc_dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_10"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:layout_marginRight="@dimen/qc_dp_10"
+                android:text="@string/revision_description"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/qc_dp_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_16"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:text="@string/revision_method_title"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/qc_dp_20"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_11" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_16"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:paddingLeft="@dimen/qc_dp_10"
+                android:paddingRight="@dimen/qc_dp_10"
+                android:text="@string/revision_step_one"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/qc_dp_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_3" />
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="@dimen/qc_dp_300"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_16"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:minHeight="@dimen/qc_dp_200"
+                android:src="@mipmap/ring_2"
+                android:textSize="@dimen/qc_dp_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_16"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:paddingLeft="@dimen/qc_dp_10"
+                android:paddingRight="@dimen/qc_dp_10"
+                android:text="@string/revision_step_two"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/qc_dp_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_1" />
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="@dimen/qc_dp_300"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_16"
+                android:layout_marginTop="@dimen/qc_dp_10"
+                android:minHeight="@dimen/qc_dp_200"
+                android:src="@mipmap/ring_1"
+                android:textSize="@dimen/qc_dp_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qc_dp_26"
+                android:layout_marginTop="@dimen/qc_dp_40"
+                android:layout_marginRight="@dimen/qc_dp_26"
+                android:layout_marginBottom="@dimen/qc_dp_50"
+                android:background="#DCEBFF"
+                android:minHeight="@dimen/qc_dp_48"
+                android:text="@string/revision_button_start"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_2"
+                app:textAllCaps="false" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
