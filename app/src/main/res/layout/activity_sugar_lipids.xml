@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    tools:context=".activity.SugarLipidsActivity">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/qc_dp_120"
+        app:layout_constraintBottom_toTopOf="@id/include_ble_log_panel"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/qc_dp_10">
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_sugar_lipids_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get SugarLipids Setting" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_sugar_lipids_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showDivider="false"
+                app:fiv_titleText="Set SugarLipids Setting" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/log_float_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
