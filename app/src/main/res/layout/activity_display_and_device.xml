@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    tools:context=".activity.DisplayAndDeviceActivity">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/qc_dp_120"
+        app:layout_constraintBottom_toTopOf="@id/include_ble_log_panel"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/qc_dp_10">
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Brightness" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Brightness" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_display_clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Display Clock" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_display_clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Display Clock" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_display_orientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Display Orientation" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_display_orientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Display Orientation" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_display_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Display Style" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_display_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Display Style" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_display_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Display Time" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_display_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Display Time" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_dial_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Dial Index" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_dial_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Dial Index" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_palm_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Palm Screen" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_palm_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Palm Screen" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_degree_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Degree Switch" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_degree_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Degree Switch" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_battery_saving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Battery Saving" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_battery_saving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Battery Saving" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_touch_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Touch Control" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_touch_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Touch Control" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_wear_calibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showDivider="false"
+                app:fiv_titleText="@string/revision_title" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/log_float_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
