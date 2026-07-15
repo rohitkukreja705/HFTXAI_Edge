@@ -89,7 +89,7 @@
     <string name="qc_text_0028">久坐提醒</string>
     <string name="qc_text_0029">饮水提醒</string>
     <string name="qc_text_0030">检测到您的心率过高（当前：%s 次/分钟）。请立即停止活动并坐下休息。</string>
-    <string name="qc_text_0031">步数 %s，卡路里 %s，距离 %s</string>
+    <string name="qc_text_0031" formatted="false">步数 %s，卡路里 %s，距离 %s</string>
 
     <string name="qc_text_0032">进度：%s%%</string>
     <string name="qc_text_0033">文件路径：%s</string>
@@ -140,7 +140,7 @@
     <string name="qc_text_0075">同步血压数据</string>
     <string name="qc_text_0076">开始血压测量</string>
     <string name="qc_text_0077">停止血压测量</string>
-    <string name="qc_text_0078">血压值：%s/%s</string>
+    <string name="qc_text_0078" formatted="false">血压值：%s/%s</string>
     <string name="qc_text_0079">同步血氧数据</string>
     <string name="qc_text_0080">开始血氧测量</string>
     <string name="qc_text_0081">停止血氧测量</string>
