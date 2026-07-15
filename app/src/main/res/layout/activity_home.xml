@@ -515,8 +515,7 @@
                     android:layout_height="wrap_content"/>
                 <TextView android:id="@+id/tv_device_mac" android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <TextView android:id="@+id/tv_firmware_version" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                <!-- tv_firmware_version is declared above in the visible device card -->
 
                 <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_scan"
                     android:layout_width="match_parent" android:layout_height="wrap_content"/>
