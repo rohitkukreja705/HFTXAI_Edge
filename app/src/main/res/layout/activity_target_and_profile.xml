@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    tools:context=".activity.TargetAndProfileActivity">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/qc_dp_120"
+        app:layout_constraintBottom_toTopOf="@id/include_ble_log_panel"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/qc_dp_10">
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Target" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Target" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_time_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Time Format" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_time_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get Time Format" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set User Profile" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Get User Profile" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_set_phone_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_titleText="Set Phone ID" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_get_phone_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showDivider="false"
+                app:fiv_titleText="Get Phone ID" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/log_float_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
