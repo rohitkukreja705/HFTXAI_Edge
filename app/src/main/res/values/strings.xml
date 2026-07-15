@@ -90,7 +90,7 @@
     <string name="qc_text_0028">Sedentary Reminder</string>
     <string name="qc_text_0029">Drinking Reminder</string>
     <string name="qc_text_0030">Your heart rate is detected to be too high (currently: %s beats/minute). Please stop your activity immediately and sit down to rest.</string>
-    <string name="qc_text_0031">Step %s,Calorie %s,Distance %s</string>
+    <string name="qc_text_0031" formatted="false">Step %s,Calorie %s,Distance %s</string>
 
     <string name="qc_text_0032">Progress: %s%%</string>
     <string name="qc_text_0033">File path: %s</string>
@@ -141,7 +141,7 @@
     <string name="qc_text_0075">Sync Blood Pressure Data</string>
     <string name="qc_text_0076">Start Blood Pressure Measurement</string>
     <string name="qc_text_0077">Stop Blood Pressure Measurement</string>
-    <string name="qc_text_0078">Blood pressure value: %s/%s</string>
+    <string name="qc_text_0078" formatted="false">Blood pressure value: %s/%s</string>
     <string name="qc_text_0079">Sync Blood Oxygen Data</string>
     <string name="qc_text_0080">Start Blood Oxygen Measurement</string>
     <string name="qc_text_0081">Stop Blood Oxygen Measurement</string>
