@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hftx_bg"
+    android:orientation="vertical"
+    tools:context=".activity.AiReportActivity">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/hftx_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="‹"
+            android:textColor="@color/hftx_text_primary"
+            android:textSize="28sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AI Health Report"
+            android:textColor="@color/hftx_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <!-- ═══ RECOVERY SCORE ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_device"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="28dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RECOVERY SCORE"
+                    android:textColor="@color/hftx_text_dim"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.12"/>
+
+                <TextView
+                    android:id="@+id/tv_recovery_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/hftx_teal"
+                    android:textSize="80sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="-8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_recovery_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Awaiting analysis"
+                    android:textColor="@color/hftx_text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_last_updated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap 'Generate' to run AI analysis"
+                    android:textColor="@color/hftx_text_dim"
+                    android:textSize="11sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- ═══ METRIC BARS ═══ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY'S READINESS"
+                android:textColor="@color/hftx_text_dim"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_device"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- HRV row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="HRV"
+                        android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_hrv_report"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-- ms" android:textColor="@color/hftx_teal"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Sleep row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Sleep Duration"
+                        android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_sleep_report"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-- hrs" android:textColor="@color/hftx_purple"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Resting HR row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Resting Heart Rate"
+                        android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_rhr_report"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-- bpm" android:textColor="hftx_red"
+                        android:textColor="@color/hftx_red"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- SpO2 row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Blood Oxygen (SpO₂)"
+                        android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_spo2_report"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-- %" android:textColor="@color/hftx_blue"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Stress row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Stress Level"
+                        android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_stress_report"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--" android:textColor="@color/hftx_gold"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ AI ANALYSIS SECTION ═══ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI ANALYSIS"
+                android:textColor="@color/hftx_text_dim"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_device"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Loading indicator -->
+                <LinearLayout
+                    android:id="@+id/layout_ai_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/hftx_teal"/>
+                    <TextView
+                        android:id="@+id/tv_ai_loading_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Analysing your biometrics…"
+                        android:textColor="@color/hftx_text_secondary"
+                        android:textSize="13sp"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- AI generated analysis text -->
+                <TextView
+                    android:id="@+id/tv_ai_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your personalised AI health report will appear here after you tap Generate below. The report analyses your HRV, sleep quality, resting heart rate, blood oxygen, and stress levels to give you a WHOOP-style recovery and readiness score with actionable recommendations."
+                    android:textColor="@color/hftx_text_secondary"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+
+            <!-- Generate button -->
+            <LinearLayout
+                android:id="@+id/btn_generate_report"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_ai_report_btn"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/tv_generate_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✦  Generate AI Report"
+                    android:textColor="@color/hftx_bg"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Error message -->
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hftx_red"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
