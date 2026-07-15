@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- FunctionItemView 自定义属性 -->
+    <declare-styleable name="FunctionItemView">
+        <!-- 标题文字内容 -->
+        <attr name="fiv_titleText" format="string" />
+        <!-- 标题文字颜色 -->
+        <attr name="fiv_titleColor" format="color" />
+        <!-- 背景色 -->
+        <attr name="fiv_backgroundColor" format="color" />
+        <!-- 是否显示分割线 -->
+        <attr name="fiv_showDivider" format="boolean" />
+        <!-- 是否显示箭头 -->
+        <attr name="fiv_showArrow" format="boolean" />
+        <!-- 分割线颜色 -->
+        <attr name="fiv_dividerColor" format="color" />
+    </declare-styleable>
+
+    <!-- FunctionTypeItemView 自定义属性 -->
+    <declare-styleable name="FunctionTypeItemView">
+        <!-- 标题文字内容 -->
+        <attr name="ftiv_titleText" format="string" />
+        <!-- 标题文字颜色 -->
+        <attr name="ftiv_titleColor" format="color" />
+        <!-- 背景色 -->
+        <attr name="ftiv_backgroundColor" format="color" />
+        <!-- 是否显示分割线 -->
+        <attr name="ftiv_showDivider" format="boolean" />
+        <!-- 分割线颜色 -->
+        <attr name="ftiv_dividerColor" format="color" />
+    </declare-styleable>
+</resources>
