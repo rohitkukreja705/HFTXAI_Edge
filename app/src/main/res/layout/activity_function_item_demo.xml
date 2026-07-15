@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="FunctionItemView 使用示例"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@android:color/white" />
+
+    <!-- XML属性设置示例 -->
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/function_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:fiv_titleText="设置选项"
+        app:fiv_titleColor="#FF6B35"
+        app:fiv_backgroundColor="@android:color/white"
+        app:fiv_showDivider="true"
+        app:fiv_dividerColor="#FF6B35" />
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/function_item_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fiv_titleText="个人资料"
+        app:fiv_backgroundColor="@android:color/white"
+        app:fiv_showDivider="true" />
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/function_item_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fiv_titleText="消息通知"
+        app:fiv_backgroundColor="@android:color/white"
+        app:fiv_showDivider="false" />
+
+    <!-- 动态设置示例区域 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:text="动态设置示例"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@android:color/white" />
+
+    <com.qcwireless.sdksample.view.FunctionItemView
+        android:id="@+id/function_item_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:fiv_backgroundColor="@android:color/white"
+        app:fiv_showDivider="true" />
+
+</LinearLayout>
