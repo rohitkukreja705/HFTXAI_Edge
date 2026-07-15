@@ -75,7 +75,7 @@ class AiReportActivity : AppCompatActivity() {
     // In production: replace with your Room DB / SharedPreferences read.
     // ─────────────────────────────────────────────
     private fun loadBiometrics(): BiometricSnapshot {
-        val connected = BleOperateManager.getInstance().isConnected
+        val connected = try { BleOperateManager.getInstance()?.isConnected == true } catch (e: Exception) { false }
         return if (connected) {
             // TODO: replace with actual cached values from your local DB
             BiometricSnapshot(hrv = null, restingHr = null, sleepHours = null,
