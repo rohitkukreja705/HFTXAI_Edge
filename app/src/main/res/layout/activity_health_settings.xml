@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.HealthSettingsActivity"
+    android:background="@color/bg_primary">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/qc_dp_120"
+        app:layout_constraintBottom_toTopOf="@id/include_ble_log_panel"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/qc_dp_10">
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_batch_sync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="false"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/health_batch_sync" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0058" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_sleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0059" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_sport_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0064" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_heart_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0041" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_blood_pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0061" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_blood_oxygen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0062" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_hrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0060" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0063" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0065" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_sugar_lipids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/title_sugarlipids" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_drink_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="true"
+                app:fiv_titleText="@string/qc_text_0066" />
+
+            <com.qcwireless.sdksample.view.FunctionItemView
+                android:id="@+id/fiv_sedentary_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fiv_showArrow="true"
+                app:fiv_showDivider="false"
+                app:fiv_titleText="@string/qc_text_0067" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <include layout="@layout/log_float_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
