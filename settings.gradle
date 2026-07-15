@@ -1,0 +1,2 @@
+rootProject.name = "HFTX_AI"
+include ':app'
