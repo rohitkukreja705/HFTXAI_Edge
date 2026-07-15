@@ -157,8 +157,7 @@
                         android:textColor="@color/hftx_text_secondary" android:textSize="14sp"/>
                     <TextView android:id="@+id/tv_rhr_report"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="-- bpm" android:textColor="hftx_red"
-                        android:textColor="@color/hftx_red"
+                        android:text="-- bpm" android:textColor="@color/hftx_red"
                         android:textSize="14sp" android:textStyle="bold"/>
                 </LinearLayout>
 
