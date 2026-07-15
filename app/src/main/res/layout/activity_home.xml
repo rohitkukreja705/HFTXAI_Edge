@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hftx_bg"
+    tools:context=".activity.HomeActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <!-- ═══ HEADER ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HFTX AI"
+                        android:textColor="@color/hftx_text_primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.04"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wearable Health Intelligence"
+                        android:textColor="@color/hftx_text_secondary"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <!-- Battery shown here when connected -->
+                <TextView
+                    android:id="@+id/tv_battery_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/hftx_teal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="🔋 82%"/>
+            </LinearLayout>
+
+            <!-- ═══ DEVICE STATUS CARD ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_device"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Ring icon -->
+                    <TextView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:text="⌚"
+                        android:textSize="28sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_teal_circle"
+                        android:layout_marginEnd="14dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_device_name_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No device paired"
+                            android:textColor="@color/hftx_text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_device_mac_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap scan to connect"
+                            android:textColor="@color/hftx_text_dim"
+                            android:textSize="12sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                    <!-- BLE Status chip -->
+                    <TextView
+                        android:id="@+id/tv_ble_status_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● Offline"
+                        android:textColor="@color/hftx_red"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_status_disconnected"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"/>
+                </LinearLayout>
+
+                <!-- Firmware version (shown when connected) -->
+                <TextView
+                    android:id="@+id/tv_firmware_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/hftx_text_dim"
+                    android:textSize="11sp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    tools:text="Firmware: 1.0.0.27"/>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hftx_border"
+                    android:layout_marginVertical="16dp"/>
+
+                <!-- Connection actions row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/btn_scan_new"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="Scan"
+                        android:textColor="@color/hftx_bg"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/bg_btn_teal"/>
+
+                    <TextView
+                        android:id="@+id/btn_reconnect_new"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="Reconnect"
+                        android:textColor="@color/hftx_teal"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_btn_outline"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:id="@+id/btn_disconnect_new"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:text="Disconnect"
+                        android:textColor="@color/hftx_text_secondary"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ SECTION: HEALTH METRICS ═══ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIVE METRICS"
+                android:textColor="@color/hftx_text_dim"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Heart Rate -->
+                <LinearLayout
+                    android:id="@+id/card_heart_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="❤️" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_heart_val"
+                        android:text="--" android:textColor="@color/hftx_text_primary"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Heart Rate  bpm" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <!-- SpO2 -->
+                <LinearLayout
+                    android:id="@+id/card_spo2"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginStart="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🫁" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_spo2_val"
+                        android:text="--" android:textColor="@color/hftx_blue"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Blood Oxygen  %" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <!-- Sleep -->
+                <LinearLayout
+                    android:id="@+id/card_sleep"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginStart="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="😴" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_sleep_val"
+                        android:text="--" android:textColor="@color/hftx_purple"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Sleep  hrs" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <!-- HRV -->
+                <LinearLayout
+                    android:id="@+id/card_hrv"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💓" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_hrv_val"
+                        android:text="--" android:textColor="@color/hftx_teal"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="HRV  ms" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <!-- Steps -->
+                <LinearLayout
+                    android:id="@+id/card_steps"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginStart="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👣" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_steps_val"
+                        android:text="--" android:textColor="@color/hftx_gold"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Steps  today" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <!-- Stress -->
+                <LinearLayout
+                    android:id="@+id/card_stress"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_metric"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginStart="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🧠" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/tv_stress_val"
+                        android:text="--" android:textColor="@color/hftx_red"
+                        android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Stress  level" android:textColor="@color/hftx_text_dim"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ AI REPORT CTA ═══ -->
+            <LinearLayout
+                android:id="@+id/btn_ai_report"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_ai_report_btn"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✦"
+                    android:textColor="@color/hftx_bg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Generate AI Health Report"
+                        android:textColor="@color/hftx_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WHOOP-style recovery &amp; readiness analysis"
+                        android:textColor="#1A3A35"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ SECTION: DEVICE SETTINGS ═══ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEVICE &amp; SETTINGS"
+                android:textColor="@color/hftx_text_dim"
+                android:textSize="11sp"
+                android:letterSpacing="0.12"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Settings grid -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/nav_health"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_settings_item"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="⚕️" android:textSize="20sp" android:gravity="center"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Health" android:textColor="@color/hftx_text_secondary"
+                        android:textSize="11sp" android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_settings_item"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤" android:textSize="20sp" android:gravity="center"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Profile" android:textColor="@color/hftx_text_secondary"
+                        android:textSize="11sp" android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_display"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_settings_item"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📱" android:textSize="20sp" android:gravity="center"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Display" android:textColor="@color/hftx_text_secondary"
+                        android:textSize="11sp" android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_notify"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_settings_item"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🔔" android:textSize="20sp" android:gravity="center"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Alerts" android:textColor="@color/hftx_text_secondary"
+                        android:textSize="11sp" android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_advanced"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_settings_item"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="⚙️" android:textSize="20sp" android:gravity="center"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="More" android:textColor="@color/hftx_text_secondary"
+                        android:textSize="11sp" android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- OTA Firmware update -->
+            <LinearLayout
+                android:id="@+id/nav_ota"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_settings_item"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📡" android:textSize="18sp" android:layout_marginEnd="12dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Firmware Update (OTA)" android:textColor="@color/hftx_text_secondary"
+                    android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="›" android:textColor="@color/hftx_text_dim" android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- ═══ HIDDEN LEGACY VIEWS (required for ViewBinding) ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:id="@+id/tv_device_name" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_ble_status" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_device_mac" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tv_firmware_version" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_scan"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_reconnect"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_disconnect"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_bt_pair"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_unbind_device"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_find_device"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_health_settings"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_target_and_profile"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_display_and_device"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_notification"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_advanced"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.qcwireless.sdksample.view.FunctionItemView android:id="@+id/fiv_via_ble_update"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/include_ble_log_panel"
+        layout="@layout/layout_ble_log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@android:id/content"
+        app:layout_anchorGravity="bottom"/>
+
+    <include layout="@layout/log_float_button"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
