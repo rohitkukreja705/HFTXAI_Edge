@@ -1,0 +1,214 @@
+<resources>
+    <string name="app_name" translatable="false">HFTX AI</string>
+    <string name="app_title" translatable="false">HFTX AI</string>
+    <string name="text_1">Scan</string>
+    <string name="text_2">Reconnect</string>
+    <string name="text_3">Disconnect</string>
+    <string name="text_4">Set Time</string>
+    <string name="text_5">Find a watch</string>
+    <string name="text_6">Battery</string>
+    <string name="text_7">hours, metric</string>
+    <string name="text_8">Message push test</string>
+    <string name="text_9">Read alarm</string>
+    <string name="text_10">Write alarm</string>
+    <string name="text_11">Blood oxygen</string>
+    <string name="text_12">Photo</string>
+    <string name="text_13">Music</string>
+    <string name="text_14">Phone</string>
+    <string name="text_15">Set target</string>
+    <string name="text_16">Dials</string>
+    <string name="text_17">sleep</string>
+    <string name="text_18">Calculate sleep</string>
+    <string name="text_19">Manual HR</string>
+    <string name="text_20">Manual BP</string>
+    <string name="text_21">Manual SpO2</string>
+    <string name="text_22">Connecting</string>
+    <string name="text_23">Get message push switch</string>
+    <string name="text_24">Set message push switch</string>
+    <string name="text_25">Synchronized automatic body temperature</string>
+    <string name="text_26">Synchronize manual body temperature</string>
+    <string name="text_27">Set personal information</string>
+    <string name="text_28">Synchronize personal information</string>
+    <string name="text_29">Add monitor</string>
+    <string name="text_30">Remove monitoring</string>
+    <string name="text_31">Remove all monitors</string>
+    <string name="text_32">OTA</string>
+    <string name="text_33">Select file</string>
+    <string name="text_34">Start upgrading</string>
+    <string name="text_35">Drinking</string>
+    <string name="text_36">Sports</string>
+    <string name="text_37">Manual Pressure</string>
+    <string name="text_38">Heart Rate PPG</string>
+    <string name="text_39">hrv</string>
+    <string name="text_40">One-click measurement</string>
+    <string name="text_41">Enable touch</string>
+    <string name="text_42">Interval Blood Oxygen</string>
+    <string name="text_43">Interval Blood Oxygen Status</string>
+    <string name="text_44">User Id Read</string>
+    <string name="text_45">Read Temperature</string>
+    <string name="text_46">Temperature Measure Control</string>
+    <string name="text_47">Close Bluetooth</string>
+    <string name="text_48">User Id Write</string>
+    <string name="text_49">New Sleep</string>
+
+    <string name="qc_text_0001">Device Connect</string>
+
+    <string name="qc_text_0002">Scan</string>
+    <string name="qc_text_0003">Reconnect</string>
+    <string name="qc_text_0004">Disconnect</string>
+    <string name="qc_text_0005">BT Pairing</string>
+    <string name="qc_text_0006">Device Notification Listener</string>
+    <string name="qc_text_0007">Register</string>
+    <string name="qc_text_0008">Unregister</string>
+    <string name="qc_text_0009">Device Name:</string>
+    <string name="qc_text_0010">Device Mac Address:</string>
+    <string name="qc_text_0011">Ble Status:</string>
+    <string name="qc_text_0012">Connected</string>
+    <string name="qc_text_0013">Disconnected</string>
+
+
+    <string name="qc_text_0014">Device Settings and Sync Data</string>
+    <string name="qc_text_0015">Device Settings</string>
+    <string name="qc_text_0016">Sync Data</string>
+
+
+    <string name="qc_text_0017">Firmware Update</string>
+    <string name="qc_text_0018">Via Ble Update</string>
+    <string name="qc_text_0019">Version:</string>
+
+    <string name="qc_text_0020">More Device Info</string>
+
+    <string name="qc_text_0021">Heart Rate Too high</string>
+    <string name="qc_text_0022">Heart Rate Too low</string>
+
+    <string name="qc_text_0023">I Got It</string>
+    <string name="qc_text_0024">Reminder</string>
+
+    <string name="qc_text_0025">Menstruation is %s days away!</string>
+    <string name="qc_text_0026">Ovulation is %s days away!</string>
+    <string name="qc_text_0027">Alarm Reminder</string>
+    <string name="qc_text_0028">Sedentary Reminder</string>
+    <string name="qc_text_0029">Drinking Reminder</string>
+    <string name="qc_text_0030">Your heart rate is detected to be too high (currently: %s beats/minute). Please stop your activity immediately and sit down to rest.</string>
+    <string name="qc_text_0031">Step %s,Calorie %s,Distance %s</string>
+
+    <string name="qc_text_0032">Progress: %s%%</string>
+    <string name="qc_text_0033">File path: %s</string>
+    <string name="qc_text_0034">The file path is invalid: %s</string>
+    <string name="qc_text_0035">The bin file has not been selected yet</string>
+    <string name="qc_text_0036">Stop upgrading</string>
+    <string name="qc_text_0037">Please select a bin file first</string>
+    <string name="qc_text_0038">Please select a bin</string>
+    <string name="qc_text_0040">Sync Data</string>
+    <string name="qc_text_0041">Heart Rate</string>
+    <string name="qc_text_0042">Settings Read</string>
+    <string name="qc_text_0043">Settings Write</string>
+    <string name="qc_text_0044">Data Sync</string>
+    <string name="qc_text_0045">Start Single Measurement</string>
+    <string name="qc_text_0046">Heart rate setting read</string>
+    <string name="qc_text_0047">Heart rate setting updated</string>
+    <string name="qc_text_0048">Heart rate sync started (real-time)</string>
+    <string name="qc_text_0049">Heart rate sync started</string>
+    <string name="qc_text_0050">Manual heart rate is not supported</string>
+    <string name="qc_text_0051">Manual heart rate value: %s</string>
+    <string name="qc_text_0052">Stop Single Measurement</string>
+    <string name="qc_text_0053"> Success</string>
+    <string name="qc_text_0054"> Fail</string>
+    <string name="qc_text_0055">Device was disconnected</string>
+
+    <string name="qc_text_0056">Scan Device</string>
+    <string name="qc_text_0057">Filter input device names</string>
+
+
+    <string name="qc_text_0058">Activity Steps</string>
+    <string name="qc_text_0059">Sleep</string>
+    <string name="qc_text_0060">HRV</string>
+    <string name="qc_text_0061">Blood Pressure</string>
+    <string name="qc_text_0062">Blood Oxygen</string>
+    <string name="qc_text_0063">Pressure</string>
+    <string name="qc_text_0064">Sport Records</string>
+    <string name="qc_text_0065">Temperature</string>
+    <string name="qc_text_0066">Drink Reminder</string>
+    <string name="qc_text_0067">Sedentary Reminder</string>
+
+    <string name="qc_text_0068">Sync Today Steps</string>
+    <string name="qc_text_0069">Sync Step Details</string>
+    <string name="qc_text_0070">Sync Sleep Data</string>
+    <string name="qc_text_0071">Sync HRV Data</string>
+    <string name="qc_text_0072">Start HRV Measurement</string>
+    <string name="qc_text_0073">Stop HRV Measurement</string>
+    <string name="qc_text_0074">HRV value: %s</string>
+    <string name="qc_text_0075">Sync Blood Pressure Data</string>
+    <string name="qc_text_0076">Start Blood Pressure Measurement</string>
+    <string name="qc_text_0077">Stop Blood Pressure Measurement</string>
+    <string name="qc_text_0078">Blood pressure value: %s/%s</string>
+    <string name="qc_text_0079">Sync Blood Oxygen Data</string>
+    <string name="qc_text_0080">Start Blood Oxygen Measurement</string>
+    <string name="qc_text_0081">Stop Blood Oxygen Measurement</string>
+    <string name="qc_text_0082">Blood oxygen value: %s</string>
+    <string name="qc_text_0083">Sync Pressure Data</string>
+    <string name="qc_text_0084">Start Pressure Measurement</string>
+    <string name="qc_text_0085">Stop Pressure Measurement</string>
+    <string name="qc_text_0086">Pressure value: %s</string>
+    <string name="qc_text_0087">Sync Sport Records</string>
+    <string name="qc_text_0088">Sync Auto Temperature</string>
+    <string name="qc_text_0089">Sync Manual Temperature</string>
+    <string name="qc_text_0090">Sync Drink Reminder</string>
+    <string name="qc_text_0091">Sync Sedentary Reminder</string>
+    <string name="qc_text_0092">Feature not supported</string>
+    <string name="qc_text_0093">Sync started</string>
+
+    <string name="qc_text_0094">Bluetooth Log</string>
+    <string name="qc_text_0095">Clear log</string>
+    <string name="qc_text_0096">Start collect</string>
+    <string name="qc_text_0097">Pause collect</string>
+    <string name="qc_text_0098">Toggle collect</string>
+    <string name="qc_text_0099">Close log panel</string>
+    <string name="qc_text_0100">Toggle log panel</string>
+    <string name="qc_text_0101">Connect Device</string>
+    <string name="qc_text_0102">Battery:%1$s Charging</string>
+    <string name="qc_text_0103">Read Device Info</string>
+    <string name="qc_text_0104">Firmware Version: %s</string>
+    <string name="qc_text_0105">Battery:%1$s</string>
+    <string name="qc_text_0106">OTA upgrade successful</string>
+    <string name="qc_text_0107">OTA upgrade failed (error code: %1$d)</string>
+    <string name="qc_text_0108">Find Device</string>
+    <string name="qc_text_0109">Force update</string>
+    <string name="qc_text_0110">Unbind Device</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="device_bind_connect_failed">Connection failed</string>
+    <string name="device_bind_connect_timeout">Connection timed out, please try again</string>
+    <string name="device_bind_connect_cancelled">Connection canceled</string>
+    <string name="health_batch_sync">Batch Sync Data</string>
+    <string name="health_batch_sync_start_failed">Batch sync failed to start</string>
+    <string name="health_batch_sync_finish_summary">Batch sync finished. success=%1$d fail=%2$d unsupported=%3$d status=%4$s</string>
+    <string name="title_health_settings">Health Settings</string>
+    <string name="title_target_and_profile">Target And Profile</string>
+    <string name="title_display_and_device">Display And Device</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_advanced">Advanced</string>
+    <string name="title_sugarlipids">SugarLipids</string>
+    <string name="advanced_open_muslim">Open Muslim</string>
+    <string name="advanced_close_muslim">Close Muslim</string>
+    <string name="health_query_today">Today Data</string>
+    <string name="health_query_single_day">Specific Day Data</string>
+    <string name="health_query_day_range">Day Range Data</string>
+    <string name="health_query_day_index_hint">Day index (0=today)</string>
+    <string name="health_query_start_day_hint">Start day index (0=today)</string>
+    <string name="health_query_count_hint">Count</string>
+    <string name="health_query_invalid_number">Please enter a valid non-negative number</string>
+    <string name="revision_title">Wear Calibration</string>
+    <string name="revision_description">If heart rate cannot be measured, or values appear during empty detection, you can perform wear calibration using the following method. If the heart rate function works normally, calibration is not needed.</string>
+    <string name="revision_method_title">Calibration method:</string>
+    <string name="revision_step_one">1. Hold the ring with the light facing up (as shown below), then tap \"Start Calibration\". After the light stays on for 5 seconds, proceed to the next step.</string>
+    <string name="revision_step_two">2. Put the ring on your finger and keep it in close contact with your skin until the light turns off. Calibration is then complete (as shown below).</string>
+    <string name="revision_button_start">Start Calibration</string>
+    <string name="revision_button_recalibrate">Recalibrate</string>
+    <string name="revision_button_calibrating">Calibrating...</string>
+    <string name="revision_toast_charging">Charging. Wear calibration cannot be performed.</string>
+    <string name="revision_toast_failed">Calibration failed</string>
+    <string name="revision_toast_success">Calibration successful</string>
+    <string name="revision_toast_connect_device_first">Please connect the device first</string>
+    <string name="praise_count">Praise count: %1$d</string>
+</resources>
+
