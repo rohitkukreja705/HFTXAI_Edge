@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qcwireless.sdksample.view.DraggableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_ble_log"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/layout_ble_log_panel">
+
+    <ImageView
+        android:id="@+id/iv_ble_log_toggle"
+        android:layout_width="@dimen/qc_dp_40"
+        android:layout_height="@dimen/qc_dp_40"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/qc_dp_20"
+        android:layout_marginBottom="@dimen/qc_dp_60"
+        android:contentDescription="@string/qc_text_0100"
+        android:padding="@dimen/qc_dp_6"
+        android:src="@mipmap/ic_log_show" />
+
+</com.qcwireless.sdksample.view.DraggableFrameLayout>
